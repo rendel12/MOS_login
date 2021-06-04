@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>title</title>
+        <!--css-->
+        <link rel="stylesheet" type="text/css" href="css/mos_login.css">
+        <!--css-->
+        
+        <!--스크립트-->
+        <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript">
+					 window.onload = function() {
+            var bannerLeft=0;
+            var first=1;
+            var last;
+            var imgCnt=0;
+            var $img = $(".rollimgs img");
+            var $first;
+            var $last;
+            $img.each(function(){
+                $(this).css("left",bannerLeft);
+                bannerLeft += $(this).width()+0;
+                $(this).attr("id", "banner"+(++imgCnt));
+            });
+            if( imgCnt > 5){
+							last = imgCnt;
+                setInterval(function() {
+                    $img.each(function(){
+                        $(this).css("left", $(this).position().left-1);
+                    });
+                    $first = $("#banner"+first);
+                    $last = $("#banner"+last);
+                    if($first.position().left < -180) {
+                        $first.css("left", $last.position().left + $last.width());
+                        first++;
+                        last++;
+                        if(last > imgCnt) { last=1; }   
+                        if(first > imgCnt) { first=1; }
+                    }
+                }, 50);       
+							}
+					};
+				</script>
+        <!--스크립트-->
+    </head>
+    <body>
+    <!--전체-->
+    <div id="wrap">
+    <!--container-->
+    <div id="container">
+    	<!--roll_banner-->
+				<div class="roll_wrap">
+					<div class="img_wrap">
+						<ul class="rollimgs">
+							<li><img src="./images/roll_banner01.png"></li>
+							<li><img src="./images/roll_banner02.png"></li>
+							<li><img src="./images/roll_banner03.png"></li>
+							<li><img src="./images/roll_banner04.png"></li>
+							<li><img src="./images/roll_banner05.png"></li>
+							<li><img src="./images/roll_banner06.png"></li>
+							<li><img src="./images/roll_banner07.png"></li>
+							<li><img src="./images/roll_banner08.png"></li>
+							<li><img src="./images/roll_banner09.png"></li>
+							<li><img src="./images/roll_banner10.png"></li>
+							<li><img src="./images/roll_banner11.png"></li>
+							<li><img src="./images/roll_banner12.png"></li>
+							<li><img src="./images/roll_banner13.png"></li>
+							<li><img src="./images/roll_banner14.png"></li>
+							<li><img src="./images/roll_banner15.png"></li>
+						</ul>
+					</div>
+				</div>
+    	<!--roll_banner-->
+    	
+    	<!--login_main-->
+    	<div class="main_area">
+    		<!--login_box-->
+    		<div class="login_wrap">
+					<div class="login_box">
+						<img src="./images/all_logo.png">
+						<input type="text" placeholder="아이디" class="id">
+						<input type="password" placeholder="비밀번호" class="pass">
+						<input type="submit" class="submit" value="로그인">
+						<p>시스템 사용문의 및 장애신고 : 02-6965-7110</p>
+					</div>
+    		</div>
+    		<!--login_box-->
+    <footer id="footer">
+    	<p>Copyright 2012-2021 Mocah Communications. All Rights Reserved.</p>
+    </footer>
+    	</div>
+    	<!--login_main-->
+    </div>
+    <!--container-->
+		</div>
+    <!--전체-->
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
