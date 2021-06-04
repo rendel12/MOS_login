@@ -1,7 +1,9 @@
 @charset "utf-8";
 
+
 HTML{width:100%; height:100%;}
 
+/*reset*/
 body{width:100%; height:100%; min-width:1200px; font-family:"NotoSans",sans-serif; color:#333;}
 
 body,h1,h2,h3,h4,h5,h6,p,dl,dd{margin:0;}
@@ -13,12 +15,14 @@ a{text-decoration:none; color:#333;}
 .inner{width:1200px; margin:0 auto;}
 
 .cf::after{content:""; display:block; clear:both;}
+/*reset*/
 
 
 #wrap{
 	width:100%;
 	height:100%;
-	overflow:hidden;
+	min-height:500px;
+	overflow:auto;
 }
 
 #container{
@@ -113,10 +117,13 @@ a{text-decoration:none; color:#333;}
 #footer{
 	width:100%;
 	height:10%;
+	max-height:40px;
 	background-color:rgba(0, 0, 0, 0.5);
 	overflow:hidden;
 	vertical-align: middle;
 	text-align:end;
+	position:absolute;
+	bottom:0;
 }
 
 #footer p{
